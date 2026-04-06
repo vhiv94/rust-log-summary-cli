@@ -1,2 +1,7 @@
+# ide settings
 .vscode/
+
+# Rust caches / build info
+.cargo/
+.rustup/
 target/
