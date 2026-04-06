@@ -1,6 +1,3 @@
-
-
-
 // Ascii art logo!!!
 // raw string: r#""#
 const LOGO: &str = r#"
@@ -22,13 +19,16 @@ fn main() {
     print_logo();
 }
 
-fn print_logo(){
+fn print_logo() {
     // \x1B[2J (or \x1B[J) clears the screen.
     // \x1B[1;1H (or \x1B[H) moves the cursor to the top-left corner.
     print!("{}[2J{}[1;1H", 27 as char, 27 as char);
-    
+
     // macro: expands to interperate variable, print the line to stdout, then an additional \n
     println!("{}", LOGO);
     println!("{}", DESC);
-    println!("---------------------------{}---------------------------", VERSION);
+    println!(
+        "---------------------------{}---------------------------",
+        VERSION
+    );
 }
